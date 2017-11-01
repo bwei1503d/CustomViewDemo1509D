@@ -94,7 +94,7 @@ public class CustomTextView extends TextView {
         System.out.println("width = " + width);
         System.out.println("height = " + height);
 
-//        setMeasuredDimension(100,100);
+//        setMeasuredDimension(200,100);
 
 
 
@@ -119,7 +119,8 @@ public class CustomTextView extends TextView {
         mPaint.setColor(color);
         canvas.drawText(text,(getWidth()-mRect.width())/2,(getHeight()+mRect.height())/2,mPaint);
 
-
+        System.out.println("getWidth() = " + getWidth());
+        System.out.println("getMeasuredWidth() = " + getMeasuredWidth());
 
 
 

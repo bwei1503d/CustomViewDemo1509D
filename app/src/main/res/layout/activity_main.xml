@@ -7,13 +7,25 @@
     android:orientation="vertical"
     tools:context="com.bwei.im.MainActivity">
 
-    <com.bwei.im.view.CustomTextView
-        android:layout_marginTop="20dp"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        app:text="1509D111"
-        app:textColor="@color/colorAccent"
-        app:textSize="20sp"
-        />
+    <!--<com.bwei.im.view.CustomTextView-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--app:text="111"-->
+        <!--app:textColor="@color/colorAccent"-->
+        <!--app:textSize="20sp"-->
+        <!--/>-->
+
+    <!--<com.bwei.im.view.CustomCircleView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" />-->
+
+
+    <com.bwei.im.view.CustomProgrssView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
 
 </LinearLayout>
