@@ -4,10 +4,13 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
+
 
 import java.io.IOException;
 import java.lang.reflect.Array;
+import java.lang.reflect.Field;
 import java.util.concurrent.TimeUnit;
 
 import okhttp3.Call;
@@ -19,9 +22,11 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-import static android.os.Build.VERSION_CODES.O;
+
+
 
 public class MainActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +35,15 @@ public class MainActivity extends Activity {
 
 
 
-//        postEnqueue();
 
+        Button button = new Button(this);
 
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
 
 
