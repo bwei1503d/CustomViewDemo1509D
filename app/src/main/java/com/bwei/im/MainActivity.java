@@ -1,12 +1,21 @@
 package com.bwei.im;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
+import com.bwei.im.kaoshi.SubActivity;
+import com.bwei.im.view.CustomPath;
+import com.xys.libzxing.zxing.activity.CaptureActivity;
+import com.xys.libzxing.zxing.encoding.EncodingUtils;
 
 import java.io.IOException;
 import java.lang.reflect.Array;
@@ -28,22 +37,57 @@ import okhttp3.Response;
 public class MainActivity extends Activity {
 
 
+    private ImageView imageView;
+    private CustomPath customPath;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
+        customPath = (CustomPath) findViewById(R.id.custom_path);
 
-
-        Button button = new Button(this);
-
-        button.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
+
+                customPath.setMode(!customPath.getMode());
+
 
             }
         });
+
+
+//        imageView = (ImageView) findViewById(R.id.imageview);
+//
+//        Button button =  (Button) findViewById(R.id.textview);
+//
+//
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//
+//                /**
+//                 * 打开扫描二维码的界面
+//                 */
+//                Intent intent = new Intent(MainActivity.this, CaptureActivity.class);
+//                startActivityForResult(intent,1);
+//
+//
+////                Bitmap bitmap =  BitmapFactory.decodeResource(getResources(),R.mipmap.ic_launcher);
+////                Bitmap resultBitmap =  EncodingUtils.createQRCode("1509D",200,200,bitmap);
+////
+////
+////                imageView.setImageBitmap(resultBitmap);
+//
+//
+//
+//
+//
+//            }
+//        });
 
 
 
@@ -52,6 +96,19 @@ public class MainActivity extends Activity {
     }
 
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+
+        String info =  data.getExtras().getString("result");
+
+        System.out.println("info = " + info);
+        Toast.makeText(this, ""+info, Toast.LENGTH_SHORT).show();
+
+
+
+    }
 
     //
     private void enqueue(){
