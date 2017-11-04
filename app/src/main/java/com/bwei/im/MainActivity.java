@@ -107,6 +107,8 @@ public class MainActivity extends Activity {
         Toast.makeText(this, ""+info, Toast.LENGTH_SHORT).show();
 
 
+        Button a = new Button(this);
+
 
     }
 
