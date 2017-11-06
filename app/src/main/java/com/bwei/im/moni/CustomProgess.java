@@ -118,7 +118,7 @@ public class CustomProgess extends View {
 
         if(progress == 100 ){
 
-            context.startActivity();
+//            context.startActivity();
 
         }
 

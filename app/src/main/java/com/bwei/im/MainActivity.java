@@ -40,23 +40,24 @@ public class MainActivity extends Activity {
     private ImageView imageView;
     private CustomPath customPath;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
 
-        customPath = (CustomPath) findViewById(R.id.custom_path);
-
-        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                customPath.setMode(!customPath.getMode());
-
-
-            }
-        });
+//        customPath = (CustomPath) findViewById(R.id.custom_path);
+//
+//        findViewById(R.id.btn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                customPath.setMode(!customPath.getMode());
+//
+//
+//            }
+//        });
 
 
 //        imageView = (ImageView) findViewById(R.id.imageview);
@@ -89,6 +90,18 @@ public class MainActivity extends Activity {
 //            }
 //        });
 
+
+        findViewById(R.id.btn_id).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                startActivity(new Intent(MainActivity.this,Main2Activity.class));
+
+//                imageView.setImageBitmap(null);
+
+            }
+        });
 
 
 
